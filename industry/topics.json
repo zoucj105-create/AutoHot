@@ -82,6 +82,46 @@
       "definition": "理想汽车的车型、增程与纯电产品线、组织与经营变化。"
     },
     {
+      "slug": "changan",
+      "name": "长安",
+      "group": "company",
+      "entityId": "changan",
+      "aliases": ["Changan", "深蓝", "阿维塔", "启源"],
+      "definition": "长安汽车及深蓝、阿维塔、启源品牌的新车、销量、智驾与出海进展。"
+    },
+    {
+      "slug": "chery",
+      "name": "奇瑞",
+      "group": "company",
+      "entityId": "chery",
+      "aliases": ["Chery", "星途", "捷途"],
+      "definition": "奇瑞及星途、捷途、iCAR 的新车、出海销量与经营情况。"
+    },
+    {
+      "slug": "saic",
+      "name": "上汽",
+      "group": "company",
+      "entityId": "saic",
+      "aliases": ["SAIC", "荣威", "名爵", "MG", "智己"],
+      "definition": "上汽集团及荣威、名爵、智己品牌的新车、合资与海外业务。"
+    },
+    {
+      "slug": "gac",
+      "name": "广汽",
+      "group": "company",
+      "entityId": "gac",
+      "aliases": ["GAC", "传祺", "埃安", "AION"],
+      "definition": "广汽集团及传祺、埃安品牌的新车、电池与合资合作动态。"
+    },
+    {
+      "slug": "leapmotor",
+      "name": "零跑",
+      "group": "company",
+      "entityId": "leapmotor",
+      "aliases": ["Leapmotor"],
+      "definition": "零跑汽车的车型、销量、出海合作与成本策略。"
+    },
+    {
       "slug": "catl",
       "name": "宁德时代",
       "group": "company",
