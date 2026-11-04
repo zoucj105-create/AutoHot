@@ -1,45 +1,44 @@
+【汽车领域翻译规则 — 本平台 100% 是汽车产业与用车内容，严格遵守】
 
-【AI 领域翻译规则 — 本平台 100% 是 AI/ML/LLM 行业内容，严格遵守】
-
-1. 歧义默认值：以下词在中文有非 AI 歧义，**一律按 AI 含义翻译**：
-   - LLM = 大语言模型（绝不译"法学硕士"/"Master of Laws"）
-   - Token / tokens = 模型 token（保留英文；绝不译"代币"/"令牌"）
-   - Transformer = Transformer 架构（保留英文；不译"变压器"）
-   - Diffusion = 扩散模型（AI 生成，不是物理扩散）
-   - Agent / Agentic = AI 智能体 / 智能体的（不译"代理人"/"中介"）
-   - Alignment = 对齐（AI 安全语境）
-   - Inference = 推理（模型生成）
-   - Reasoning = 推理（注意：与 inference 都译"推理"，必要时用"链式推理"区分 CoT；reasoning model 指 o1/o3/R1 这类思考型模型）
-   - Embedding = 嵌入向量（也可保留英文）
-   - Distillation = 知识蒸馏
-   - Hallucination = 模型幻觉
-   - Fine-tune / Fine-tuning = 微调
-   - Pretrain / Pretraining = 预训练
-   - Context window = 上下文窗口
-   - Prompt = 提示词
-   - Skill / Skills = 技能（Claude 等 Agent 框架的能力包，不译"特长"）
+1. 歧义默认值：以下词在中文有非汽车歧义，**一律按汽车含义翻译**：
+   - Model = 车型（绝不译“模特”）
+   - Launch = 上市、发布（不译“发射”）
+   - Recall = 召回（不译“回忆”）
+   - Range = 续航（不译“音域”“范围”）
+   - Trim = 配置版本、款型（不译“修剪”）
+   - Charging = 充电、补能
+   - Range anxiety = 续航焦虑
+   - Drivetrain = 动力总成、驱动形式
+   - Powertrain = 动力总成
+   - Chassis = 底盘
+   - Suspension = 悬架
+   - ADAS = 高级驾驶辅助系统
+   - OTA = 空中升级（可保留 OTA）
+   - Facelift = 改款
+   - Model year = 年款
+   - Dealer = 经销商
+   - Fleet = 车队、集团客户
+   - Incentive = 补贴、优惠
 
 2. 以下专有名词**一律保留英文原文**，不翻译不加中文括注：
-   - AI 公司：OpenAI / Anthropic / Google DeepMind / xAI / Meta AI / Mistral / DeepSeek / Cohere / HuggingFace（HF）/ Runway / ElevenLabs / Suno / Pika / Midjourney / Perplexity
-   - 模型族（举例 + 通用规则）：GPT / Claude / Gemini / Llama / Qwen / Grok / o 系列 / DeepSeek / Mistral / Mixtral / Phi / Sora / Veo / Imagen
-     **规则**：任何大模型族名、产品代号一律保留英文
-   - 模型版本号（举例 + 通用规则）：GPT-5 / Claude 4.7 / Claude Sonnet 4.6 / Llama 4 / Gemini 3 / o3 / o4 / DeepSeek-V4 / Qwen3.7
-     **规则**：版本号一字不改（包括字母数字后缀如 4o / 4.7 / 405B / V4 / R1），绝不"翻译性扩写"（不要把 "405B" 译成 "4050 亿"，不要把 "V4" 译成 "第 4 代"）
-   - 技术缩写（举例 + 通用规则）：LLM / RAG / RLHF / DPO / LoRA / QLoRA / PEFT / MoE / CoT / ReAct / KV cache / SOTA / AGI / MCP / ADK / NPU / GPU / TPU
-     **规则**：任何 2-5 字母的全大写缩写，默认按 AI/ML 含义保留英文
-   - 评测基准（举例 + 通用规则）：MMLU / GPQA / HumanEval / SWE-bench / SWE-bench Verified / AIME / HLE / ARC-AGI / ARC-AGI 2 / MT-Bench / Chatbot Arena / Aider Polyglot / LiveCodeBench
-     **规则**：以 -bench / -eval 结尾或全大写的评测名一律保留英文
-   - AI 工具/产品：Cursor / Copilot / Codex / Aider / Devin / Cline / Claude Code / Windsurf / Zed / v0 / Bolt / Lovable / Replit Agent
-   - Agent 框架：LangChain / LangGraph / LlamaIndex / CrewAI / AutoGen / Pydantic AI / Vercel AI SDK / DSPy
-   - 推理/部署：Ollama / vLLM / SGLang / TensorRT / Triton / CUDA / ROCm
-   - 通用技术：API / SDK / CLI / IDE / SaaS / CDN / SSO / OAuth / JWT / WebSocket / SSE / gRPC
+   - 品牌与集团：BYD / Tesla / Volkswagen / Toyota / GM / Ford / Stellantis / BMW / Mercedes-Benz / Hyundai / Kia / Nissan / Honda
+   - 车型名与代号：Model 3 / Model Y / Cybertruck / SU7 / YU7 / ID.4 / ID.7 / bZ4X / IONIQ 5 / EV6
+   - 技术缩写：ADAS / NOA / NGP / FSD / AEB / LKA / ACC / OTA / BEV / PHEV / EREV / HEV / ICE / SUV / MPV / CLTC / WLTP / NEDC / EPA / kWh / kW / N·m / V2G / V2L
+   - 平台名：MEB / PPE / SEA / e-TNGA / E-GMP / 800V 平台
+   - 电池与补能：LFP / NMC / 固态电池（可中英并列）/ 800V / 5C 超充
+   **规则**：任何 2–5 字母的全大写缩写，默认按汽车行业含义保留英文
+   **规则**：车型版本号一字不改（Pro / Max / Ultra / 长续航版 / 四驱版），绝不“翻译性扩写”
 
-3. 中国厂商**优先用官方中文品牌名**（首次出现可双标"千问（Qwen3）"，后续选一种保持一致）：
-   - 千问（Qwen）/ 文心一言 / 智谱（GLM）/ 月之暗面（Kimi）/ 深度求索（DeepSeek）/ 阶跃星辰（Step）/ 零一万物（Yi）/ 百川 / 豆包（字节）/ 混元（腾讯）/ 可灵（Kling，快手）/ 即梦（Jimeng，字节）/ MiniMax（不译）/ 美团 LongCat / 昆仑万维 Skywork / 面壁 MiniCPM / 华为昇腾 / 寒武纪
+3. 中国品牌**优先用官方中文品牌名**（首次出现可双标，后续保持一致）：
+   - 比亚迪 / 腾势 / 仰望 / 方程豹 / 吉利 / 领克 / 极氪（ZEEKR）/ 银河 / 奇瑞 / 星途 / 捷途 / 长安 / 深蓝 / 阿维塔 / 启源 / 上汽 / 荣威 / 名爵（MG）/ 智己 / 广汽 / 传祺 / 埃安 / 蔚来 / 乐道 / 萤火虫 / 小鹏 / 理想 / 小米汽车 / 华为 / 问界 / 智界 / 享界 / 尊界 / 零跑 / 宁德时代
 
-4. 代码 / 命令 / URL / 数字单位 **一字不改**保留：
-   - 反引号代码 `code` 不翻译
-   - 命令如 /code-review、pip install、npm run 不译（不要译"代码审查"）
-   - URL 原样
-   - 数字+单位：8k context / 175B params / 3.5x speedup / $3 per M tokens / 99.9%
-   - 金额、参数量、比例、区间必须保留原文的阿拉伯数字和单位；不要把 $10B-$100B 改写成“数百亿至数千亿美元”等中文数量词
+4. 数字与单位 **一字不改**保留：
+   - 价格：19.98 万元、$42,990、起售价
+   - 续航：CLTC 620 km、WLTP 500 km
+   - 功率与扭矩：230 kW、450 N·m
+   - 充电：10%–80% 需 18 分钟、5C 超充、800V
+   - 销量：月销 31,018 辆、同比 +12.3%
+   - 金额、比例、区间必须保留原文的阿拉伯数字和单位；不要把 $10B 改写成“数百亿美元”等中文数量词
+   - 车型尺寸：长宽高 4,820/1,900/1,620 mm，轴距 2,900 mm
+
+5. 中英混排保持可读：中文句子里的英文品牌、车型、缩写原样保留；同一篇里对同一家公司只用一种叫法（例如全篇用“大众”，不要一会儿“大众汽车”一会儿“Volkswagen”）。

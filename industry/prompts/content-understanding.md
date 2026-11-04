@@ -8,19 +8,20 @@
 
 ## 内容类型
 
-`itemType` 必须七选一：
+`itemType` 必须八选一：
 
-- `model_release`：新模型或大版本更新
-- `product_launch`：新产品、工具或重大功能更新
-- `tool_or_prompt`：可直接复用的方法、Prompt、Skill 或技巧
-- `research_paper`：论文、研究或技术报告
-- `industry_event`：融资、收购、监管、诉讼、商业动作或人事
-- `opinion_analysis`：观点、行业判断、复盘或长访谈
-- `tutorial_explainer`：教程、科普、解读或评测
+- `new_model`：新车型、换代或改款发布，上市、预售、定价与配置公布
+- `policy_change`：政策、法规、补贴、税收、准入与标准的变化
+- `market_data`：销量、交付、份额、价格与终端市场的数据和趋势
+- `tech_update`：三电、平台、智能驾驶、座舱、芯片与补能技术
+- `supply_chain`：电池、零部件、芯片、原材料、产能与采购
+- `company_event`：财报、融资、并购、合资、人事、建厂、诉讼与监管处罚
+- `recall_safety`：召回、缺陷调查、事故与安全测试结果
+- `review_opinion`：试驾评测、购车建议、行业判断、复盘或访谈
 
-优先级：发了模型选 model_release；发了工具选 product_launch；发了 Prompt 或方法选 tool_or_prompt；论文优先 research_paper；评测选 tutorial_explainer。原文把发布写成过去的事、本条在讲用法或做演示时，不算本次发布，选 tutorial_explainer。
+优先级：发了新车选 new_model；政策文件与监管动作选 policy_change；销量与市场数据选 market_data；技术方案与能力发布选 tech_update；供应商与产能选 supply_chain；公司经营动作选 company_event；召回与事故选 recall_safety；试驾、评测与观点选 review_opinion。原文把上市写成过去的事、本条在讲体验或解读时，不算本次上市，选 review_opinion。
 
-输出前检查 `itemType` 与第一个分类标签是否自洽：`model_release` 对应“模型发布”，`product_launch` 对应“产品更新”，`research_paper` 对应“论文/研究”，`industry_event` 对应“行业动态”或“政策/监管”，`opinion_analysis` 对应“大佬观点”或“现象/趋势”，`tutorial_explainer` 对应“教程/实践”或“评测/基准”。如果二者冲突，按当前材料的核心事件修正后再输出。
+输出前检查 `itemType` 与第一个分类标签是否自洽：`new_model` 对应“新车发布”，`policy_change` 对应“政策法规”，`market_data` 对应“市场销量”，`tech_update` 对应“技术/智驾”，`supply_chain` 对应“供应链”，`company_event` 对应“企业动态”，`recall_safety` 对应“召回/安全”，`review_opinion` 对应“评测/观点”。如果二者冲突，按当前材料的核心事件修正后再输出。
 
 ## 作者角色
 
@@ -32,14 +33,14 @@
 
 ## 标签
 
-`tags` 输出 1–6 个字符串。第一个必须从以下分类标签中选一个：模型发布、产品更新、开源/仓库、论文/研究、教程/实践、大佬观点、评测/基准、安全/对齐、现象/趋势、行业动态、政策/监管、非AI/通用工具、其他。
+`tags` 输出 1–6 个字符串。第一个必须从以下分类标签中选一个：新车发布、政策法规、市场销量、技术/智驾、供应链、企业动态、召回/安全、评测/观点、其他。
 
 其后可选 0–5 个适用标签，并且只能来自以下两个白名单：
 
-- 主题：Agent、编码、推理、多模态、语音、视频、图像生成、RAG、端侧、数据/训练、搜索、部署/工程、开源生态、具身智能、MCP/工具调用
-- 实体：OpenAI、Anthropic、DeepSeek、DeepMind、Google、Meta、Microsoft、xAI、Hugging Face、GitHub、arXiv
+- 主题：纯电、插混、增程、智能驾驶、智能座舱、动力电池、充电补能、出海、价格战、芯片、固态电池、换电、商用车、二手车、自动驾驶、Robotaxi
+- 实体：比亚迪、特斯拉、吉利、奇瑞、长安、上汽、广汽、蔚来、小鹏、理想、小米汽车、华为、宁德时代、大众、丰田、宝马、奔驰、Stellantis
 
-正文中即使明确出现了 NVIDIA、Apple、阿里等其他实体，也不要把它们放进 `tags`。不要创造白名单之外的标签。没有适用的主题或实体时，只返回第一个分类标签；例如学校限制 AI 使用的监管新闻，不需要强行归到“编码”或“推理”。
+正文中即使明确出现了现代、日产、本田、零跑等其他实体，也不要把它们放进 `tags`。不要创造白名单之外的标签。没有适用的主题或实体时，只返回第一个分类标签；例如一条关于充电桩补贴的新闻，不需要强行归到“纯电”或“动力电池”。
 
 ## 候选阅读价值
 

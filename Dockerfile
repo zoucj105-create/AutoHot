@@ -2,6 +2,8 @@
 # Build arg NPM_REGISTRY switches the npm registry (e.g. https://registry.npmmirror.com in mainland China).
 FROM node:24-trixie-slim AS base
 WORKDIR /app
+# 在中国大陆构建时 apt 走腾讯云镜像；Docker build 的出网线路取决于宿主机。
+RUN sed -i 's|deb.debian.org|mirrors.tencent.com|g; s|security.debian.org|mirrors.tencent.com|g' /etc/apt/sources.list.d/debian.sources
 # pg_dump for the optional database backups (Debian's client matches the PostgreSQL 17 server in compose).
 RUN apt-get update \
  && apt-get install -y --no-install-recommends postgresql-client ca-certificates \
